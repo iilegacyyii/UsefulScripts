@@ -50,7 +50,7 @@ for i in range(len(firstnames)):
     names.append(lastnames[i] + firstnames[i]) # lastnamefirstname
 
 # admin users too. Only uses flastname and firstnamel
-if args.admin:
+if args.a:
     for i in range(int(len(names) / 2)):
         names.append("adm_" + names[i])
         names.append(names[i] + "_adm")
@@ -59,7 +59,8 @@ if args.admin:
 if args.o:
     try:
         f = open(args.o, "wt")
-        f.writelines(names)
+        for name in names:
+            f.write(name + "\n")
         f.close()
         exit(1)
     except Exception as e:
