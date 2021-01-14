@@ -7,7 +7,7 @@ Somewhere to store all of the random scripts I make in case they're useful in th
 
 - [ADNames.py](#ADNames.py)
 
-- [DockerRegistryDump.py](DockerRegistryDump.py)
+- [DockerRegistryDump.py](#DockerRegistryDump.py)
 
 ### ADNames.py
 
