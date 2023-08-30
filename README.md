@@ -6,7 +6,7 @@ Somewhere to store all of the random scripts I make in case they're useful in th
 ## Contents
 
 - [crtsh_query.py](#crtsh_querypy)
-- [hashing_test.c](#hashing_testc]
+- [hashing_test.c](#hashing_testc)
 
 ### crtsh\_query.py
 
