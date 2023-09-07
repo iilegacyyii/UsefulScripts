@@ -6,6 +6,7 @@ Somewhere to store all of the random scripts I make in case they're useful in th
 ## Contents
 
 - [crtsh_query.py](#crtsh_querypy)
+- [fnv1a_32.py](#fnv1a_32py)
 - [hashing_test.c](#hashing_testc)
 
 ### crtsh\_query.py
@@ -24,6 +25,26 @@ positional arguments:
 
 optional arguments:
   -h, --help  show this help message and exit
+```
+
+### fnv1a\_32.py
+
+Hashes a given list of strings with [FNV1a (32bit)](https://en.wikipedia.org/wiki/Fowler%E2%80%93Noll%E2%80%93Vo_hash_function), useful for builder scripts.
+
+**Usage**
+
+```
+python .\fnv1a_32.py
+```
+
+**Example output**
+
+```
+python .\fnv1a_32.py
+0x7794e6cc: USERNAME=
+0x3edf40f2: COMPUTERNAME=
+0x48623011: USERDOMAIN=
+0xa1509af4: USERDNSDOMAIN=
 ```
 
 ### hashing\_test.c
