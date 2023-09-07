@@ -28,7 +28,7 @@ optional arguments:
 
 ### hashing\_test.c
 
-Loads a given dll and hashes its exports with [FNV](https://en.wikipedia.org/wiki/Fowler%E2%80%93Noll%E2%80%93Vo_hash_function).
+Loads a given dll and hashes its exports with [FNV1a (32bit)](https://en.wikipedia.org/wiki/Fowler%E2%80%93Noll%E2%80%93Vo_hash_function).
 
 **Usage**
 
