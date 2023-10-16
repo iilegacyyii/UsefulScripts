@@ -6,6 +6,7 @@ Somewhere to store all of the random scripts I make in case they're useful in th
 ## Contents
 
 - [crtsh_query.py](#crtsh_querypy)
+- [debug.h](#debugh)
 - [fnv1a_32.py](#fnv1a_32py)
 - [hashing_test.c](#hashing_testc)
 
@@ -26,6 +27,29 @@ positional arguments:
 optional arguments:
   -h, --help  show this help message and exit
 ```
+
+### debug.h
+
+Debug header file I end up including in many projects, adds a set of logging functions that will only be included in debug mode (only tested with MSVC)
+
+**Usage**
+
+```c
+#include "debug.h"
+
+int main(int argc, char** argv, char** envp)
+{
+  LOG_SUCCESS("Success");
+  LOG_INFO("Info");
+  LOG_ERROR("Error");
+  LOG_DEBUG("Debug");
+  return 0;
+}
+```
+
+**Example output**
+
+![screenshot of debug logging output](img/debug_h.png) 
 
 ### fnv1a\_32.py
 
