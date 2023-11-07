@@ -9,6 +9,8 @@ Somewhere to store all of the random scripts I make in case they're useful in th
 - [debug.h](#debugh)
 - [fnv1a_32.py](#fnv1a_32py)
 - [hashing_test.c](#hashing_testc)
+- [logger.py](#loggerpy)
+- [nmap4appendix.py](#nmap4appendixpy)
 
 ### crtsh\_query.py
 
@@ -92,4 +94,60 @@ hashing_test <dll>
 0x5dc343c5 AlpcAdjustCompletionListConcurrencyCount
 0x88a0af25 AlpcFreeCompletionListMessage
 0x20db6563 AlpcGetCompletionListLastMessageInformation
+```
+
+### logger.py
+
+QoL class for printing your typical coloured `[+] Success!` logs.
+
+**Usage**
+
+```python
+import logger
+
+
+log = logger.Logger(debug=True)
+
+log.success("Success")
+log.info("Info")
+log.debug("Debug")
+log.error("Error")
+```
+
+**Example output**
+
+![screenshot of logging output](img/debug_h.png) 
+
+### nmap4appendix.py
+
+QoL tool of which wraps nmap to generate CSV output. Useful for generating tables in word via CSV.
+
+**Usage**
+
+```
+nmap4appendix.py [-h] (-l LIST | -H HOSTS) [-o OUTFILE] [-u]
+
+nmap scans given hosts, and outputs in report-friendly CSV
+
+options:
+  -h, --help            show this help message and exit
+  -l LIST, --list LIST  file containing lists of hosts
+  -H HOSTS, --hosts HOSTS
+                        specify comma-seperated hosts via command line
+  -o OUTFILE, --outfile OUTFILE
+                        output filepath
+  -u, --udp             Perform UDP scan (default: false)
+```
+
+**Example output**
+
+```
+[*] Executing: nmap -sC -sV -p- --min-rate=1000 -oX - 8.8.8.8
+[+] Scan complete
+[*] Parsing results
+[+] Parsing complete
+IP Address,Hostname,Port,Protocol,Service
+8.8.8.8,dns.google,53,,
+8.8.8.8,dns.google,443,https,
+[+] Finished!
 ```

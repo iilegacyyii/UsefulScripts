@@ -1,3 +1,7 @@
+// debug.h
+// A header file defining a set of logging functions that will only be included in debug mode (wraps printf)
+// - @0xLegacyy (Jordan Jay)
+
 #ifndef LEGACYY_DEBUG_H
 #define LEGACYY_DEBUG_H
 
