@@ -110,8 +110,8 @@ log = logger.Logger(debug=True)
 
 log.success("Success")
 log.info("Info")
-log.debug("Debug")
 log.error("Error")
+log.debug("Debug")
 ```
 
 **Example output**
