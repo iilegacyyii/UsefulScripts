@@ -87,12 +87,18 @@ if __name__ == "__main__":
         command.append("-iL")
         command.append(args.list)
     else:
-        command.append(args.hosts)
+        if "," in args.hosts:
+            for host in args.hosts.split(","):
+                command.append(host)
+        else:
+            command.append(args.hosts)
     
     # Run nmap process
     log.info(f"Executing: {' '.join(command)}")
     process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     stdout, stderr = process.communicate() # wait until process is finished
+    if len(stderr) > 0:
+        log.error(stderr.decode())
     log.success("Scan complete")
 
     # Parse results
