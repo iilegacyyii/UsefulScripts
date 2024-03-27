@@ -116,7 +116,7 @@ log.debug("Debug")
 
 **Example output**
 
-![screenshot of logging output](img/debug_h.png) 
+![screenshot of logging output](img/logger_py.png) 
 
 ### nmap4appendix.py
 
